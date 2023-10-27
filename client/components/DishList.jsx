@@ -34,7 +34,7 @@ function DishCard({ data }) {
           height={300}
           width={300}
           src={`${process.env.STRAPI_URL || "https://strapi-g45m.onrender.com"}${
-            data.attributes.image.data.attributes.url
+            data.attributes.image.data[0].attributes.url
           }`}
           alt=""
         />
