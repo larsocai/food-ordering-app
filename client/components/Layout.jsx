@@ -7,6 +7,7 @@ const Cart = dynamic(() => import("@/components/Cart"), { ssr: false });
 import Head from "next/head";
 import Link from "next/link";
 
+
 function Navigation() {
   const { user, setUser } = useAppContext();
   const router = useRouter();
@@ -26,7 +27,7 @@ function Navigation() {
               className="block text-2xl max-w-max text-white font-medium"
               href="/"
             >
-              Food Order App
+              taste tap .
             </Link>
           </div>
 

@@ -7,8 +7,6 @@ export default function Form({
   setFormData,
   callback,
   error,
-  signInWithGoogle,
-  register,
 }) {
   return (
     <section className="py-24 md:py-32 bg-white">
@@ -68,22 +66,11 @@ export default function Form({
               {buttonText}
             </button>
           </form>
-
-          {/* HTML for the login page */}
-          <div id="firebase-auth-container"></div>
-          <button
-            onClick={signInWithGoogle}
-            className="inline-block py-3 px-7 mb-6 w-full text-base text-green-50 font-medium text-center leading-6 bg-blue-500 hover:bg-blue-600 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 rounded-md shadow-sm"
-          >
-            Use Google
-          </button>
-
         </div>
       </div>
     </section>
   );
 }
-
 
 // import React from "react";
 
@@ -94,6 +81,8 @@ export default function Form({
 //   setFormData,
 //   callback,
 //   error,
+//   signInWithGoogle,
+//   register,
 // }) {
 //   return (
 //     <section className="py-24 md:py-32 bg-white">
@@ -153,6 +142,16 @@ export default function Form({
 //               {buttonText}
 //             </button>
 //           </form>
+
+//           {/* HTML for the login page
+//           <div id="firebase-auth-container"></div>
+//           <button
+//             onClick={signInWithGoogle}
+//             className="inline-block py-3 px-7 mb-6 w-full text-base text-green-50 font-medium text-center leading-6 bg-blue-500 hover:bg-blue-600 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 rounded-md shadow-sm"
+//           >
+//             Use Google
+//           </button> */}
+
 //         </div>
 //       </div>
 //     </section>

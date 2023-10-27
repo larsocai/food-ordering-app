@@ -41,38 +41,15 @@ export default function LoginRoute() {
   if (loading) return <Loader />;
 
   return (
-    <div>
-      {/* HTML for the login page */}
-      <div id="firebase-auth-container"></div>
-
-      <Form
-        title="Login"
-        buttonText="Login"
-        formData={formData}
-        setFormData={setFormData}
-        callback={handleLogin}
-        error={error}
-        signInWithGoogle={signIn}
-      />
-    </div>
+    <Form
+      title="Login"
+      buttonText="Login"
+      formData={formData}
+      setFormData={setFormData}
+      callback={handleLogin}
+      error={error}
+    />
   );
-}
-
-// Front-end JavaScript for login and signup
-function signIn() {
-  // Call the backend route for signing in with Google
-  fetch("/api/auth/google", {
-    method: "POST",
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      // Handle the response data if needed
-      console.log(data);
-    })
-    .catch((error) => {
-      // Handle any errors that occur during the fetch request
-      console.error("Error:", error);
-    });
 }
 
 // import { useState } from "react";
@@ -118,13 +95,37 @@ function signIn() {
 //   if (loading) return <Loader />;
 
 //   return (
-//     <Form
-//       title="Login"
-//       buttonText="Login"
-//       formData={formData}
-//       setFormData={setFormData}
-//       callback={handleLogin}
-//       error={error}
-//     />
+//     <div>
+//       {/* HTML for the login page */}
+//       <div id="firebase-auth-container"></div>
+
+//       <Form
+//         title="Login"
+//         buttonText="Login"
+//         formData={formData}
+//         setFormData={setFormData}
+//         callback={handleLogin}
+//         error={error}
+//         signInWithGoogle={signIn}
+//       />
+//     </div>
 //   );
+// }
+
+// // Front-end JavaScript for login and signup
+// function signIn() {
+//   console.log("here");
+//   // Call the backend route for signing in with Google
+//   fetch("/strapi-google-auth/callback", {
+//     method: "POST",
+//   })
+//     .then((response) => response.json())
+//     .then((data) => {
+//       // Handle the response data if needed
+//       console.log(data);
+//     })
+//     .catch((error) => {
+//       // Handle any errors that occur during the fetch request
+//       console.error("Error:", error);
+//     });
 // }
