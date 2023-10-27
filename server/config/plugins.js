@@ -22,6 +22,6 @@ module.exports = {
     },
   },
   "users-permissions": {
-    jwtSecret: process.env.JWT_SECRET,
+    jwtSecret: "JWT_SECRET",
   },
 };
