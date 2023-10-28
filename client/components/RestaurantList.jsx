@@ -1,6 +1,5 @@
 import { gql, useQuery } from "@apollo/client";
 import Link from "next/link";
-import Image from "next/image";
 import Loader from "./Loader";
 
 const QUERY = gql`

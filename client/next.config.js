@@ -2,6 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
+    domains: ["strapi-g45m.onrender.com"],
     remotePatterns: [
       {
         protocol: "http",
