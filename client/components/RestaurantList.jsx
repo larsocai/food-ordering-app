@@ -24,7 +24,9 @@ const QUERY = gql`
   }
 `;
 
+
 function RestaurantCard({ data }) {
+  console.log(data)
   return (
     <div className="w-full md:w-1/2 lg:w-1/3 p-4">
       <div className="h-full bg-gray-100 rounded-2xl">
@@ -68,7 +70,7 @@ function RestaurantList(props) {
   if (loading) return <Loader />;
 
   if (data.restaurants.data && data.restaurants.data.length) {
-    const searchQuery = data.restaurants.data.filter((query) =>
+    const searchQuery = data.restaurants.data.filter((query) => 
       query.attributes.name.toLowerCase().includes(props.query.toLowerCase())
     );
 
