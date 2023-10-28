@@ -26,10 +26,11 @@ const QUERY = gql`
 
 
 function RestaurantCard({ data }) {
+  console.log(data)
   return (
     <div className="w-full md:w-1/2 lg:w-1/3 p-4">
       <div className="h-full bg-gray-100 rounded-2xl">
-        {/* <Image
+        <Image
           className="w-full rounded-2xl"
           height={300}
           width={300}
@@ -38,14 +39,14 @@ function RestaurantCard({ data }) {
           }`}
           
           alt=""
-        /> */}
+        />
         <div className="p-8">
           <h3 className="mb-3 font-heading text-xl text-gray-900 hover:text-gray-700 group-hover:underline font-black">
-            {data}
+            {data.attributes.name}
           </h3>
-          {/* <p className="text-sm text-gray-500 font-bold">
+          <p className="text-sm text-gray-500 font-bold">
             {data.attributes.description}
-          </p> */}
+          </p>
           <div className="flex flex-wrap md:justify-center -m-2">
             <div className="w-full md:w-auto p-2 my-6">
               <Link
