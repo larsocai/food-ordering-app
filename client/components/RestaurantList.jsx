@@ -26,7 +26,7 @@ const QUERY = gql`
 
 
 function RestaurantCard({ data }) {
-  console.log(data)
+  console.log(data.attributes.image.data[0].attributes.url)
   return (
     <div className="w-full md:w-1/2 lg:w-1/3 p-4">
       <div className="h-full bg-gray-100 rounded-2xl">
@@ -35,7 +35,7 @@ function RestaurantCard({ data }) {
           height={300}
           width={300}
           src={`${process.env.STRAPI_URL || "https://strapi-g45m.onrender.com"}${
-            data.attributes.image.data.attributes.url
+            data.attributes.image.data[0].attributes.url
           }`}
           
           alt=""
