@@ -26,19 +26,10 @@ const QUERY = gql`
 
 
 function RestaurantCard({ data }) {
-  console.log(data.attributes.image.data[0].attributes.url)
   return (
     <div className="w-full md:w-1/2 lg:w-1/3 p-4" key={data.id}>
       <div className="h-full bg-gray-100 rounded-2xl">
-        {/* <Image
-          className="w-full rounded-2xl"
-          height={300}
-          width={300}
-          src={`https://strapi-g45m.onrender.com/uploads/locale_481914e98b.jpg`}
-          
-          alt=""
-        /> */}
-        <div className="w-full rounded-2xl" style={{height: '300px', weight: '300px', backgroundImage: `url(https://strapi-g45m.onrender.com/uploads/locale_481914e98b.jpg)`}}/>
+        <div className="w-full rounded-2xl" style={{height: '300px', weight: '300px', backgroundImage: `url(https://strapi-g45m.onrender.com/${data.attributes.image.data[0].attributes.url})`}}/>
         <div className="p-8">
           <h3 className="mb-3 font-heading text-xl text-gray-900 hover:text-gray-700 group-hover:underline font-black">
             {data.attributes.name}
